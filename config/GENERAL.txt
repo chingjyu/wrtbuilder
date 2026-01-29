@@ -8,8 +8,11 @@ CONFIG_PACKAGE_v2ray-core=y
 CONFIG_PACKAGE_luci-app-autoreboot=y
 CONFIG_PACKAGE_luci-app-filebrowser=y
 CONFIG_PACKAGE_luci-app-ttyd=y
+CONFIG_PACKAGE_luci-app-uhttpd=y
 CONFIG_PACKAGE_luci-app-upnp=y
 CONFIG_PACKAGE_luci-app-usteer=y
+CONFIG_PACKAGE_naiveproxy=y
+CONFIG_PACKAGE_nginx=y
 #删除插件
 CONFIG_PACKAGE_luci-app-samba4=n
 #参数调整
@@ -84,5 +87,3 @@ CONFIG_PACKAGE_luci-lib-ipkg=y
 CONFIG_PACKAGE_luci-lua-runtime=y
 CONFIG_PACKAGE_luci-proto-bonding=y
 CONFIG_PACKAGE_luci-proto-relay=y
-
-
