@@ -1,7 +1,9 @@
 # 配置软件源
-sed -i 's|downloads\.immortalwrt\.org|mirror.nju.edu.cn/immortalwrt|g' /etc/apk/repositories.d/distfeeds.list
-# 添加 OpenWrt-momo 软件源
+sed -i 's|downloads\.immortalwrt\.org|immortalwrt.kyarucloud.moe|g' /etc/apk/repositories.d/distfeeds.list
+# 配置 OpenWrt-momo
 wget -O - https://github.com/nikkinikki-org/OpenWrt-momo/raw/refs/heads/main/feed.sh | ash
+sed -i "/list 'cgroup' 'services\/zerotier'/a \	list 'cgroup' 'services/sing-box'" /etc/config/momo
+sed -i "/list 'cgroup' 'services\/sing-box'/a \	list 'cgroup' 'services/naiveproxy'" /etc/config/momo
 # 配置 NaiveProxy
 cat << 'EOF' > /etc/init.d/naiveproxy
 #!/bin/sh /etc/rc.common
